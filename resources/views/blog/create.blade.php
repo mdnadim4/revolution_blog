@@ -4,14 +4,14 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="jumbotron">
-                <h1>Latest Blog Posts</h1>
+            <div class="jumbotron text-center">
+                <h1>Create Blog Posts</h1>
                 <h4>Revolution Blog Sites</h4>
             </div>
         </div>
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                {!! Form::open([ 'method'=>'post' ]) !!}
+                {!! Form::open([ 'method'=>'post', 'action'=>'BlogController@store' ]) !!}
                     <div class="form-group">
                             {!! Form::label('title', 'Title:') !!}
                             {!! Form::text('title', null, ['class' => 'form-control', 'placeholder' => 'Enter Title' ]) !!}

@@ -1,3 +1,17 @@
+a{
+    color: white;
+}
+
+a:hover{
+    color: black;
+    text-decoration: none;
+}
+
 .container .jumbotron, .container-fluid .jumbotron {
     margin-top: -22px;
+}
+
+.jumbotron h4{
+    margin-top: 15px;
+    padding-left: 10px;
 }
