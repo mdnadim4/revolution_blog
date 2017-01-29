@@ -19,6 +19,18 @@
                         <div class="panel-body">
                             {{$blog->body}}
                         </div>
+                        <div class="panel-footer">
+
+                                {!! Form::open(['method'=>'get', 'action'=>['BlogController@restore', $blog->id] ]) !!}
+                                    <div class="form-group">
+                                        {!! Form::submit('Restore', ['class'=>'btn btn-success btn-lg']) !!}
+                                        {!! Form::open(['method'=>'DELETE', 'action'=>['BlogController@delete', $blog->id] ]) !!}
+                                            {!! Form::submit('Delete', ['class'=>'btn btn-danger btn-lg']) !!}
+                                        {!! Form::close() !!}
+                                    </div>
+                                {!! Form::close() !!}
+
+                        </div>
                     </div>
                 @endforeach
             </div>

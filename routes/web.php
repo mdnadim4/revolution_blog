@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
 Auth::routes();
 
@@ -21,7 +21,9 @@ Route::get('/home', 'HomeController@index');
 
 Route::resource('blog', 'BlogController');
 
-Route::get('/blog/bin', 'BlogController@bin');
+Route::get('/bin', 'BlogController@bin');
+Route::get('/restore/{id}', 'BlogController@restore');
+Route::delete('/delete/{id}', 'BlogController@delete');
 
 
 Route::get('/', 'BlogController@index');

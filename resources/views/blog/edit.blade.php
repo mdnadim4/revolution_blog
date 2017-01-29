@@ -25,7 +25,7 @@
                 <div class="form-group">
                     {!! Form::submit('Edit Post', ['class' => 'btn btn-success btn-lg']) !!}
                     {!! Form::open(['method'=>'DELETE', 'action'=>['BlogController@destroy', $data->id]]) !!}
-                        <sapn>{!! Form::submit('Delete Post', ['class'=>'btn btn-danger btn-lg']) !!}</span>
+                        {!! Form::submit('Delete Post', ['class'=>'btn btn-danger btn-lg']) !!}
                     {!! Form::close() !!}
 
                 </div>
