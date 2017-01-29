@@ -11,8 +11,12 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    <link href="/css/app.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="stylesheet" href="/css/app.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" media="screen" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
     <!-- Scripts -->
     <script>
@@ -23,7 +27,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
 
@@ -46,6 +50,7 @@
                     <ul class="nav navbar-nav">
                         <li><a href="{{ url('/') }}">Home</a></li>
                         <li><a href="{{ url('/blog/create') }}">Create</a></li>
+                        <li><a href="{{ url('/blog/bin') }}">Trash</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

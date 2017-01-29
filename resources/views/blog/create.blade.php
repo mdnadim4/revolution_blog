@@ -4,7 +4,7 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="jumbotron text-center">
+            <div class="jumbotron text-center jumbo">
                 <h1>Create Blog Posts</h1>
                 <h4>Revolution Blog Sites</h4>
             </div>
@@ -14,7 +14,7 @@
                 {!! Form::open([ 'method'=>'post', 'action'=>'BlogController@store' ]) !!}
                     <div class="form-group">
                             {!! Form::label('title', 'Title:') !!}
-                            {!! Form::text('title', null, ['class' => 'form-control', 'placeholder' => 'Enter Title' ]) !!}
+                            {!! Form::text('title', null, ['class' => 'form-control', 'placeholder' => 'Enter Title']) !!}
                     </div>
                     <div class="form-group">
                         {!! Form::label('body', 'Body:') !!}

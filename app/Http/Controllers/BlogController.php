@@ -34,18 +34,29 @@ class BlogController extends Controller
 
     public function edit($id)
     {
-        $data = Blog::find($id);
+        $data = Blog::findOrFail($id);
+        return view('blog.edit', compact('data'));
     }
 
     public function update(Request $request, $id)
     {
-        $data = Blog::find($id);
         $input = $request->all();
+        $data = Blog::findOrFail($id);
+        $data->update($input);
+        return redirect('/');
+
     }
 
     public function destroy($id)
     {
-        $data = Blog::find($id);
-        Blog::delete($data);
+        $data = Blog::findOrFail($id);
+        $data->delete();
+        return redirect('/blog/bin');
+    }
+
+    public function bin()
+    {
+        $deletedblog = Blog::onlyTrashed()->get();
+        return view('blog.bin', compact('deletedblog'));
     }
 }
